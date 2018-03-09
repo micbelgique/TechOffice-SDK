@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="techoffice.js"></script>
+    <script src="example.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Techoffice JS example</title>
+    <style>
+        *{
+            margin: 0 auto; 
+        }
+
+        #corps{
+            width: 800px;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        #error{
+            margin-top: 20px;
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="corps">
+        <h1>Tech'Office SDK - JS example</h1>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Your key" id="key">
+            <span class="input-group-btn">
+                <button class="btn btn-success" type="button" onclick="sendRequest()">Send request</button>
+            </span>
+        </div>
+        <div class="alert alert-danger" role="alert" id="error">
+            
+        </div>
+        <h2>Result of the call API : Sensor types</h2>
+        <div class="table-responsive">
+            <table class="table table-condensed">
+               <thead>
+                   <tr>
+                       <td>
+                           Sensor type
+                       </td>
+                   </tr>
+               </thead>
+               <tbody id="generateTable">
+
+               </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
